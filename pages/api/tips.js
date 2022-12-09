@@ -43,10 +43,10 @@ export default function handler(req, res) {
       justify-content: center;
       align-items: center;
       height: 300px;
-      padding-top:6rem
     }
     .text {
-      font-size:8rem
+    margin-top:5rem
+      font-size:4rem
     }
     </style>
     </head>
