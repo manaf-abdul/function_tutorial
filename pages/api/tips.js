@@ -1,4 +1,4 @@
-let tips=[
+let tips = [
     "All our dreams can come true, if we have the courage to pursue them —Walt Disney",
     "The secret of getting ahead is getting started. —Mark Twain",
     "Ive missed more than 9,000 shots in my career. Ive lost almost 300 games. 26 times Ive been trusted to take the game winning shot and missed. Ive failed over and over and over again in my life, and that is why I succeed —Michael Jordan",
@@ -28,16 +28,46 @@ let tips=[
     "If something is important enough, even if the odds are stacked against you, you should still do it.",
     "Hold the vision, trust the process.",
     "Dont be afraid to give up the good to go for the great.",
-    "People who wonder if the glass is half empty or full miss the point. The glass is refillable."
-]
+    "People who wonder if the glass is half empty or full miss the point. The glass is refillable.",
+];
 
 export default function handler(req, res) {
-    let tipOfTheDay=tips[Math.floor(Math.random()*tips.length)]
-    let html=`<h1>${tipOfTheDay}</h1>`
-   
-    res.status(200).send(html)
+    let tipOfTheDay = tips[Math.floor(Math.random() * tips.length)];
+    let html = `
+    <html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
 }
 
-async function getTips(req,res){
-    res.status(200).json({ name: 'Inside getTips function.......' })
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center">
+  <h2>${tipOfTheDay}</h2>
+  </div>
+</div>
+
+</body>
+</html>
+    `;
+
+    res.status(200).send(html);
+}
+
+async function getTips(req, res) {
+    res.status(200).json({ name: "Inside getTips function......." });
 }
