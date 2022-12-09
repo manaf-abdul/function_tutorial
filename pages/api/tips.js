@@ -40,7 +40,6 @@ export default function handler(req, res) {
 .container { 
   height: 200px;
   position: relative;
-  border: 3px solid green; 
 }
 
 .center {
