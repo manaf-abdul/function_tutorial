@@ -34,34 +34,30 @@ let tips = [
 export default function handler(req, res) {
     let tipOfTheDay = tips[Math.floor(Math.random() * tips.length)];
     let html = `
+    <!DOCTYPE html>
     <html>
-<head>
-<style>
-.container { 
-  height: 200px;
-  position: relative;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
-</head>
-<body>
-
-<div class="container">
-  <div class="center">
-  <h2>${tipOfTheDay}</h2>
-  </div>
-</div>
-
-</body>
-</html>
+    <head>
+    <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      padding-top:6rem
+    }
+    .text {
+      font-size:8rem
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="center">
+      <h1 class="text">${tipOfTheDay}<h1/>
+    </div>
+    
+    </body>
+    </html>
     `;
 
     res.status(200).send(html);
