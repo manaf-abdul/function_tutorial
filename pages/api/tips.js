@@ -31,11 +31,12 @@ let tips=[
     "People who wonder if the glass is half empty or full miss the point. The glass is refillable."
 ]
 
-let tipOfTheDay=[tips[Math.floor(Math.random()*tips.length)]]
+let tipOfTheDay=tips[Math.floor(Math.random()*tips.length)]
 
 export default function handler(req, res) {
+    const html=`<h1>${tipOfTheDay}</h1>`
    
-    res.status(200).json({ Tip : tipOfTheDay })
+    res.status(200).send(html)
 }
 
 async function getTips(req,res){
