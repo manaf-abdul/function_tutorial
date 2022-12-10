@@ -51,15 +51,12 @@ export default function handler(req, res) {
     </style>
     </head>
     <body>
-    
     <div class="center">
       <h1 class="text">${tipOfTheDay}<h1/>
     </div>
-    
     </body>
     </html>
     `;
-
     res.status(200).send(html);
 }
 
