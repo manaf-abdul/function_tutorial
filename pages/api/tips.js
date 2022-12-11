@@ -9,7 +9,7 @@ let tips = [
     "I wake up every morning and think to myself, How far can I push this company in the next 24 hours.",
     "If people are doubting how far you can go, go so far that you cant hear them anymore.",
     "We need to accept that we wont always make the right decisions, that well screw up royally sometimes―understanding that failure is not the opposite of success, its part of success.",
-    "Write it. Shoot it. Publish it. Crochet it. Sauté it. Whatever. MAKE.",
+    "Write it. Shoot it. Publish it. Crochet it. Sauté it. Whatever. MAKE",
     "Youve gotta dance like theres nobody watching, love like youll never be hurt, sing like theres nobody listening, and live like its heaven on earth.",
     "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
     "Everything you can imagine is real.",
